@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body style="text-align:center;background-color:aqua;color:black;">
+<style>
+.mask-custom {
+  backdrop-filter: contrast(140%) brightness(100%) saturate(100%) sepia(50%) hue-rotate(0deg) grayscale(0%) invert(0%) blur(0px);
+  mix-blend-mode: lighten;
+  background: rgba(161, 44, 199, 0.31);
+  opacity: 1;
+}
+</style>
+
+<!-- Background image -->
+<div
+     class="bg-image"
+     style="
+             background-image: url('https://mdbootstrap.com/img/new/fluid/nature/018.jpg');
+            height: 100vh;
+            "
+     >
+  <div class="mask mask-custom">
+<h3 style="color:white;">LOGIN</h3>
+
+<form action="login" method="post">
+    {% csrf_token %}
+
+    <input style="text-align:center;height:20px;width:300px;border-radius: 25px;border: 2px solid #73AD21;padding: 20px;" type="text" placeholder="username" name="un"><br><br>
+    <input style="text-align:center;height:20px;width:300px;border-radius: 25px;border: 2px solid #73AD21;padding: 20px;" type="password" placeholder=" password" name="pw"><br><br>
+    <input type="submit">    <a style="color:white;font-size:20px;" href="register">create newuser</a><br><br><br>
+
+</form>
+</body>
+
+  </div>
+
+</div>
+</html>
